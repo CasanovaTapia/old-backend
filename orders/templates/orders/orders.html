@@ -1,0 +1,32 @@
+<div class="orders col-md-12">
+<table class="table table-bordered table-striped">
+ <tr>
+<td>Name:</td>
+<td>Sales Rep:</td>
+<td>Order #:<a href=""></a></td>
+<td>Price:</td>
+<td>Order Time:</td>
+<td>Status:</td>
+</tr>
+{%for client in client_list%}
+{%for order in order_list%}
+{%if client == order.client%}
+<tbody class="searchable">
+<tr>
+<td>{{client.full_name}}</td>
+<td>{{client.sales_rep}}</td>
+<td><a href="{% url 'orders:detail' order.id %}">{{order.id}}</a></td>
+<td>${{order.order_total_price}}</td <!--Still needs to calculate total price od products!!!--->
+<td>{{order.created}}</td>
+<td><span class="status badge">{{order.order_status}}</span></td>
+</tr>
+{%endif%}
+</tbody>
+{%endfor%}
+{%endfor%}
+</table>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+<script>
+$('#orders').addClass('active');
+</script>

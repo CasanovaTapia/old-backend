@@ -1,0 +1,68 @@
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+#page-content-wrapper{
+width:100%;
+}
+#sidebar-wrapper{
+margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #000;
+  position: fixed;
+  height: 100%;
+  overflow-y: hidden;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+#sidebar{
+margin-top:52px;
+background-color: #333;
+text-align: center;
+height:100%;
+-webkit-font-smoothing:antialiased;
+border-right:1px solid rgba(255, 255, 255, 0.39);
+overflow:hidden;
+}
+#sidebar button{
+background-color: transparent;
+border: none;
+outline:none;
+}
+.profile p {
+color:white;
+}
+.prof-pic{
+ width: 100px;
+ height: 100px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border: 2px solid #EDEDEA;
+ margin-left: auto;
+ margin-right: auto;
+ background-position-x:14;
+ background-position: 16px 0;
+}
+.sidenav a{
+background-color:transparent;
+color: white;
+}
+.nav-pills li.active a{
+background-color:transparent;
+border: 1px solid white;
+}
+.nav-pills li a:hover{
+background-color:transparent;
+border:1px solid white;
+}
+.nav-pills li.active a:hover{
+background-color:transparent;
+}
+.user-welcome h3{
+color:white;
+font-size:12px;
+}

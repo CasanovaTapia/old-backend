@@ -1,0 +1,126 @@
+<div class="col-md-12 client-detail">
+<hr>
+<div class="detail-title-top">
+<h1>Client Details</h1>
+</div>
+<div id="detail-banker">
+</div>
+<div class="box effect8">
+{%for client in client_detail%}
+	<div class="details-pic">
+	<img class="client-detail-pic" src="{{client.profie_pic.url}}"/>
+	</div>
+	<div class="details">
+	<label> Name:</label><p> {{client.full_name}}</p>
+	</div>
+	<div class="details">
+	<label>Phone:</label><p>{{client.phone}}</p>
+	</div>
+	<hr>
+	<br>
+	<div class="details">
+	<label>Email:</label> <p>{{client.email}}</p>
+	</div>
+	<div class="details">
+	<label>Age:</label> <p>{{client.age}}</p>
+	</div>
+	<div class="details">
+	<label>Address:</label> <p>{{client.address}}</p>
+	</div>
+	<hr>
+	<br>
+	<div class="details">
+	<label>Occupation:</label> <p>{{client.occupation}}</p>
+	</div>
+	<div class="details">
+	<label>Tier:</label> <p>{{client.tier}}</p>
+	</div>
+	<div class="details">
+	<label>Birthday:</label> <p>{{client.birthday}}</p>
+	</div>
+	<hr>
+	<br>
+	<div class="details">
+	<label>Relationship Status:</label> <p>{{client.relationship_status}}</p>
+	</div>
+	<div class="details">
+	<label>Sales Rep:</label> <p>{{client.sales_rep}}</p>
+	</div>
+	<div class="details">
+	<label>Meeting Location:</label> <p>{{client.meeting_location}}</p>
+	</div>
+	<hr>
+	<br>
+	<div class="details">
+	<label>Person of Contact:</label> <p>{{client.contact_person}}</p>
+	</div>
+	<hr>
+{%endfor%}
+</div>
+</div>
+
+
+<div class="orders col-md-12">
+<hr>
+<div class="detail-title">
+<h1>Orders</h1>
+</div>
+<table class="table table-bordered table-striped">
+ <tr>
+<td>Name:</td>
+<td>Sales Rep:</td>
+<td>Order #:<a href=""></a></td>
+<td>Price:</td>
+<td>Order Time:</td>
+<td>Status:</td>
+</tr>
+{%for client in client_detail%}
+{%for order in order_detail%}
+{%if client == order.client%}
+<tbody class="searchable">
+<tr>
+<td>{{client.full_name}}</td>
+<td>{{client.sales_rep}}</td>
+<td><a href="{% url 'orders:detail' order.id %}">{{order.id}}</a></td>
+<td>${{order.order_total_price}}</td <!--Still needs to calculate total price od products!!!--->
+<td>{{order.created}}</td>
+<td><span class="status badge">{{order.order_status}}</span></td>
+</tr>
+{%endif%}
+</tbody>
+{%endfor%}
+{%endfor%}
+</table>
+</div>
+
+<div class="col-md-10">
+<hr>
+<div class="detail-title">
+<h1>Wardrobe</h1>
+</div>
+{%for product in product_detail%}
+{%for order in order_detail%}
+{%if product.id == order.id%}
+<div class="wardrobe-item">
+<img class="wardrobe-client-detail" src="{{product.product_pic.url}}"/>
+</div>
+{%endif%}
+{%endfor%}
+{%endfor%}
+</div>
+
+<div class="col-md-2">
+<div class="top-ten-outside">
+<div class="detail-title-ten">
+<h1>Top 10:</h1>
+</div>
+<div class="top-ten-item">
+<img class="top-ten-pic" src="{{STATIC_URL}}page/img/belt.png"/>
+<img class="top-ten-pic" src="{{STATIC_URL}}page/img/oxford.png"/>
+<img class="top-ten-pic" src="{{STATIC_URL}}page/img/sunglasses.png"/>
+<img class="top-ten-pic" src="{{STATIC_URL}}page/img/captoe.png"/>
+<img class="top-ten-pic" src="{{STATIC_URL}}page/img/tie.png"/>
+<img class="top-ten-pic" src="{{STATIC_URL}}page/img/button3.png"/>
+</div>
+</div>
+</div>

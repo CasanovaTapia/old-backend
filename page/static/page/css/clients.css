@@ -1,0 +1,261 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:200);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+body{
+background-image: url("/static/page/img/linen.jpg")
+}
+.prof-pic-client{
+ margin-top: 80px;
+ width: 150px;
+ height: 150px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border: 2px solid #EDEDEA;
+ margin-left: auto;
+ margin-right: auto;
+ background-position-x:14;
+ background-position: 16px 0;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+}
+.client-list h3{
+color:white;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+text-align: center;
+}
+.client-list{
+ display:inline-block;
+padding-right:80px;
+}
+#search-bar{
+margin-top:78px;
+width:600px;
+border-radius:20px;
+position:fixed;
+}
+
+
+.search .form-control{
+background-color:rgba(255, 255, 255, 0);
+color:rgba(255, 255, 255, 0.86);
+}
+.mix{
+display:none;
+}
+.container{
+text-align:center;
+}
+.client-list a{
+text-decoration:none;
+}
+
+.client-detail{
+margin-top:78px;
+}
+
+.box h3{
+	text-align:center;
+	position:relative;
+	top:80px;
+}
+.box {
+	width:70%;
+	height:auto;
+	background:#FFF;
+	margin:40px auto;
+}
+.box p {
+display:inline-block !important;
+-webkit-font-smoothing:antialiased;
+color:black;
+font-weight:bolder;
+font-size:21px;
+padding-right:5px;
+display: inline;
+vertical-align: top;
+}
+.box h2 {
+display:inline-block !important;
+color:black;
+font-weight:bolder;
+font-size:21px;
+padding-right:5px;
+display: inline;
+vertical-align: top;
+}
+
+/*==================================================
+ * Box Effect
+ * ===============================================*/
+.effect8
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect8:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+
+.wardrobe-client-detail{
+ margin-top: 80px;
+ width: 150px;
+ height: 150px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border: 2px solid #333;
+ margin-left: auto;
+ margin-right: auto;
+ background-position-x:14;
+ background-position: 16px 0;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+}
+.wardrobe-item{
+display:inline-block;
+}
+
+
+.detail-title{
+color:white;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+}
+.detail-title-top{
+color:white;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+display:inline-block;
+}
+.details{
+display: inline-block;
+margin-top:22px;
+margin-left:30px;
+}
+.details p{
+-webkit-font-smoothing:antialiased;
+font-family: 'Roboto', sans-serif;
+font-size: 18px;
+font-weight: lighter;
+}
+.box hr{
+padding:0px;
+margin:0px;
+color:blue;
+}
+.details label{
+font-size:18px;
+padding-right:5px;
+padding-left:5px;
+}
+.details-pic{
+text-align:center;
+}
+.client-detail-pic{
+ margin-top:12px;
+ width: 100px;
+ height: 100px;
+ background-size: cover;
+ display: inline-block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border: 2px solid #EDEDEA;
+ margin-left: auto;
+ margin-right: auto;
+ background-position-x:14;
+ background-position: 16px 0;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+}
+#detail-banker{
+display: inline-block;
+float: right;
+font-size:36px;
+font-family:'Raleway' sans-serif;
+color:white;
+line-height:84px;
+padding-right:20px;
+padding-left:20px;
+border-radius:60px;
+-webkit-font-smoothing:antialiased;
+background-color: #333;
+}
+.add-client{
+display:inline-block;
+float:right;
+}
+.add-client button{
+text-decoration:none;
+color:white;
+font-size:15px;
+font-family:'Raleway', sans-serif;
+-webkit-font-smoothing:antialiased;
+background-color:rgba(51, 51, 51, 0.67);
+width:100px;
+height:100px;
+border-radius:50%;
+border:2px solid white;
+outline:0;
+}
+.add-client-btn{
+margin-top:60px;
+}
+
+.top-ten-pic{
+ margin-top: 5px;
+ width: 80px;
+ height: 80px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+ border: 2px solid #EDEDEA;
+ margin-left: auto;
+ margin-right: auto;
+ background-position-x:14;
+ background-position: 16px 0;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+background-color:rgba(255, 255, 255, 0.49);
+}
+.detail-title-ten{
+color:white;
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+text-align:center;
+}
+.top-ten-outside{
+border:1px solid white;
+}

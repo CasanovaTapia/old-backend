@@ -1,0 +1,20 @@
+<div class="col-md-10">
+{%for product in order_detail %}
+<h1>{{product.product_type}}</h1>
+<h1>{{product.product_price}}</h1>
+<h1>{{product.product_material}}</h1>
+<h1>{{product.product_color}}</h1>
+<h1>{{product.product_size}}</h1>
+
+<div class="collapse-card">
+  <div class="title">
+    <i class="fa fa-check-circle fa-2x fa-fw"></i>
+    <span><!-- Optional right aligned text --></span>
+    <strong>{{product.product_name}}</strong>
+  </div>
+  <div class="body">
+    <!-- Body Text -->
+  </div>
+</div>
+</div>
+{%endfor%}
