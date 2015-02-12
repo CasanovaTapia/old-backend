@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Sign In</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"</link>
+        <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}page/css/sign-in.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+</head>
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+
+<div class="container">
+
+	<form name="login" method="post" action="/page/auth" class="form-signin">{% csrf_token  %}
+		<h1 class="form-signin-heading text-muted">Lapel</h1>
+		<input value="{{email}}" type="text" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
+		<input type="password" name="password" class="form-control" placeholder="Password" required="">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">
+			Sign In
+		</button>
+	</form>
+	{%if why_it_failed%}
+	<div class="alert alert-danger fade in">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <center> <strong>{{why_it_failed}}</strong> Please Try Again.</center>
+      </div>
+	{%endif%}
+</div>
+</html>
