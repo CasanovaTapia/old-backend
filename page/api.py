@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from tastypie.resources import ModelResource
+from tastypie.authorization import Authorization
 from orders.models import Order
 from clients.models import Client
 
