@@ -3,12 +3,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from tastypie.api import Api
-from page.api import OrderResource, UserResource
+from page.api import OrderResource, UserResource, ClientResource
 
 
 v1_api = Api(api_name='v1')
 v1_api.register(UserResource())
 v1_api.register(OrderResource())
+v1_api.register(ClientResource())
 
 urlpatterns = patterns('',
     # Examples:
