@@ -2,10 +2,12 @@ from django.shortcuts import render
 from django.template import RequestContext,loader
 from orders.models import Order
 from clients.models import Client
+from django.contrib.auth.decorators import login_required
 from products.models import Products
 import page.views as page_app
 from django.views.generic import TemplateView
 
+@login_required(login_url='/page')
 def orders(request):
 	template_path = "orders/orders.html"
 	template = loader.get_template(template_path)
@@ -17,6 +19,7 @@ def orders(request):
 	orders_html = template.render(context)
 	return page_app.page(request,orders_html)
 
+@login_required(login_url='/page')
 def detail(request,id):
 	template_path = "orders/order_detail.html"
 	template = loader.get_template(template_path)

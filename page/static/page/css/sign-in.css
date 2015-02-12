@@ -2,7 +2,7 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #eee;
-    background-image: url("/static/page/img/linen.jpg")
+    background-image: url("/static/page/img/vichy.png")
   }
   .fullscreen_bg {
     position: fixed;
@@ -63,3 +63,11 @@ body {
     text-align: center;
     text-shadow: 0 2px 2px rgba(0,0,0,0.5);
   }
+.btn-primary{
+background-color:#333;
+border-color:#333;
+}
+.btn-primary:hover{
+background-color: #333;
+border-color:#333;
+}

@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext,loader
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 import page.views as page_app
 from .models import Client
@@ -9,6 +10,7 @@ from products.models import Products
 #from .models import Document
 #from .forms import DocumentForm
 
+@login_required(login_url='/page')
 def clients(request):
 	template_path = "clients/clients.html"
 	template = loader.get_template(template_path)
@@ -18,6 +20,7 @@ def clients(request):
 	clients_html = template.render(context)
 	return page_app.page(request,clients_html)
 
+@login_required(login_url='/page')
 def detail(request,id):
 	template_path = "clients/client_detail.html"
 	template = loader.get_template(template_path)
