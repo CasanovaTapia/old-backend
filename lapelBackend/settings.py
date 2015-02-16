@@ -43,6 +43,7 @@ INSTALLED_APPS = (
 	'products',
 	'procurements',
 	'tastypie',
+	'avatar',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -29,3 +29,10 @@ def detail(request,id):
 	orders_html = template.render(context)
 	return page_app.page(request,orders_html)
 
+def create_order(request):
+	template_path = "orders/create_order.html"
+	template = loader.get_template(template_path)
+	context = {}
+	context = RequestContext(request,context)
+	create_order_html = template.render(context)
+	return page_app.page(request,create_order_html)

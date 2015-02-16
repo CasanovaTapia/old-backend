@@ -9,12 +9,35 @@ width:100%;
 margin-left: -250px;
   left: 250px;
   width: 250px;
-  background: #000;
+  background: #333;
   position: fixed;
   height: 100%;
   overflow-y: hidden;
   z-index: 1000;
   transition: all 0.4s ease 0s;
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
 }
 #sidebar{
 margin-top:52px;

@@ -23,4 +23,5 @@ urlpatterns = patterns('',
 	url(r'^clients/', include("clients.urls", namespace="clients")),
 	url(r'^procurements/', include("procurements.urls")),
 	url(r'^api/', include(v1_api.urls)),
+	url(r'^avatar/', include('avatar.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
