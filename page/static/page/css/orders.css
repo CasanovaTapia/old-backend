@@ -1,9 +1,16 @@
 .orders{
-margin-top:78px;
+margin-top:74px;
+}
+.order-detail{
+margin-top:74px;
 }
 .status{
 background-color:green;
 }
 .order-client-select{
 text-align:center;
+}
+.orders button{
+background-color:transparent;
+border:none;
 }

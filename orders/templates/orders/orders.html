@@ -10,6 +10,36 @@
 </tr>
 {%for client in client_list%}
 {%for order in order_list%}
+
+<!-- Status Select Modal -->
+<div class="modal fade" id="orderStatus{{order.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Update Order Status</h4>
+      </div>
+      <div class="modal-body">
+        Current Status: {{order.order_status}}
+	<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Dropdown
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{ order.get_order_status_display }}</a></li>
+  </ul>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 {%if client == order.client%}
 <tbody class="searchable">
 <tr>
@@ -18,14 +48,16 @@
 <td><a href="{% url 'orders:detail' order.id %}">{{order.id}}</a></td>
 <td>${{order.order_total_price}}</td <!--Still needs to calculate total price od products!!!--->
 <td>{{order.created}}</td>
-<td><span class="status badge">{{order.order_status}}</span></td>
+<td><button data-toggle="modal" data-target="#orderStatus{{order.id}}"><span class="status badge">{{order.order_status}}</span></button></td>
 </tr>
+
 {%endif%}
+{%endfor%}
+{%endfor%}
 </tbody>
-{%endfor%}
-{%endfor%}
 </table>
 </div>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 <script>
 $('#orders').addClass('active');

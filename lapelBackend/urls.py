@@ -2,14 +2,45 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from tastypie.api import Api
-from page.api import OrderResource, UserResource, ClientResource
+from django.contrib.auth.models import User
+from orders.models import Order
+from clients.models import Client
+from rest_framework import routers, serializers, viewsets
 
+# Serializers define the API representation.
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ('url', 'username', 'email', 'is_staff')
 
-v1_api = Api(api_name='v1')
-v1_api.register(UserResource())
-v1_api.register(OrderResource())
-v1_api.register(ClientResource())
+class OrderSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+	model = Order
+	fields = ('url','client','order_status','order_total_price','created')
+
+class ClientSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+	model = Client
+	fields = ('url','full_name','phone','email','age','address','contact_method','occupation','tier','birthday','relationship_status','sales_rep','meeting_location','contact_person','profie_pic')
+
+# ViewSets define the view behavior.
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+class ClientViewSet(viewsets.ModelViewSet):
+    queryset = Client.objects.all()
+    serializer_class = ClientSerializer
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+router.register(r'orders',OrderViewSet)
+router.register(r'clients',ClientViewSet)
 
 urlpatterns = patterns('',
     # Examples:
@@ -22,6 +53,6 @@ urlpatterns = patterns('',
 	url(r'^orders/', include("orders.urls", namespace="orders")),
 	url(r'^clients/', include("clients.urls", namespace="clients")),
 	url(r'^procurements/', include("procurements.urls")),
-	url(r'^api/', include(v1_api.urls)),
 	url(r'^avatar/', include('avatar.urls')),
+	url(r'^api/', include(router.urls)),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

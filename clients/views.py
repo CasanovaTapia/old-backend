@@ -25,14 +25,15 @@ def detail(request,id):
 	template_path = "clients/client_detail.html"
 	template = loader.get_template(template_path)
 	client_detail = Client.objects.filter(pk=id)
-	client_spec = Order.objects.get(client=client_detail)
+	#client_spec = Order.objects.get(client=client_detail)
 	order_detail = Order.objects.all()
 	product_detail = Products.objects.all()
 
 	context = {"client_detail":client_detail,
 				"order_detail":order_detail,
 				"product_detail":product_detail,
-				"client_spec":client_spec}
+				#"client_spec":client_spec
+				}
 	context = RequestContext(request,context)
 	clients_html = template.render(context)
 	return page_app.page(request,clients_html)

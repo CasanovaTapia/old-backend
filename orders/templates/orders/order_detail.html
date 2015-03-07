@@ -1,11 +1,13 @@
-<div class="col-md-10">
+<div class="col-md-10 order-detail">
 {%for product in order_detail %}
+<div class="box effect8">
+<h1>{{client.full_name}}</h1>
 <h1>{{product.product_type}}</h1>
 <h1>{{product.product_price}}</h1>
 <h1>{{product.product_material}}</h1>
 <h1>{{product.product_color}}</h1>
 <h1>{{product.product_size}}</h1>
-
+</div>
 <div class="collapse-card">
   <div class="title">
     <i class="fa fa-check-circle fa-2x fa-fw"></i>

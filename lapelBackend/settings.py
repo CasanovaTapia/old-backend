@@ -42,8 +42,9 @@ INSTALLED_APPS = (
 	'clients',
 	'products',
 	'procurements',
-	'tastypie',
+	'rest_framework',
 	'avatar',
+	'rest_framework.authtoken',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -96,3 +97,27 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = '~/lapelBackend/media'
 MEDIA_URL = '/media/'
+
+# API Settings
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+	'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}

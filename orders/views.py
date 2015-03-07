@@ -24,7 +24,7 @@ def detail(request,id):
 	template_path = "orders/order_detail.html"
 	template = loader.get_template(template_path)
 	order_detail = Products.objects.filter(pk=id)
-	context = {"order_detail":order_detail}
+	context = {"order_detail":order_detail,}
 	context = RequestContext(request,context)
 	orders_html = template.render(context)
 	return page_app.page(request,orders_html)
@@ -36,3 +36,8 @@ def create_order(request):
 	context = RequestContext(request,context)
 	create_order_html = template.render(context)
 	return page_app.page(request,create_order_html)
+
+def order_status_update(request,id):
+	status_update = Order.objects.filter(pk=id)
+	#status_update.order_status = 	
+	return(request)

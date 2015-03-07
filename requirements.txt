@@ -1,5 +1,4 @@
 django
-cherrypy
-django-tastypie
 pillow
 django-avatar
+djangorestframework
