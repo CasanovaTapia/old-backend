@@ -261,3 +261,29 @@ Quit the server with CONTROL-C.
 [16/Feb/2015 05:40:20] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
 [16/Feb/2015 05:40:42] "GET /orders/create_order/ HTTP/1.1" 200 3977
 [16/Feb/2015 05:40:43] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[07/Mar/2015 22:05:14] "GET /static/page/css/clients.css HTTP/1.1" 304 0
+[07/Mar/2015 22:05:14] "GET /static/page/css/orders.css HTTP/1.1" 304 0
+[07/Mar/2015 22:05:14] "GET /static/page/css/paper-collapse.min.css HTTP/1.1" 304 0
+[07/Mar/2015 22:05:14] "GET /static/page/css/navbar.css HTTP/1.1" 304 0
+[07/Mar/2015 22:05:14] "GET /procurements/ HTTP/1.1" 200 4523
+[07/Mar/2015 22:05:15] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[07/Mar/2015 22:05:15] "GET /static/page/css/procurements.css HTTP/1.1" 304 0
+[07/Mar/2015 22:05:15] "GET /static/page/js/paper-collapse.min.js HTTP/1.1" 304 0
+[07/Mar/2015 22:05:15] "GET /static/page/js/move.min.js HTTP/1.1" 304 0
+[07/Mar/2015 22:05:15] "GET /static/page/js/countUp.min.js HTTP/1.1" 304 0
+[07/Mar/2015 22:05:15] "GET /static/page/js/mixitup.min.js HTTP/1.1" 304 0
+[07/Mar/2015 22:05:15] "GET /static/page/img/linen.jpg HTTP/1.1" 304 0
+[07/Mar/2015 22:05:16] "GET /orders/ HTTP/1.1" 200 33078
+[07/Mar/2015 22:05:27] "GET /clients/ HTTP/1.1" 200 7296
+[07/Mar/2015 22:06:27] "GET /clients/1/ HTTP/1.1" 200 7003
+[07/Mar/2015 22:06:27] "GET /media/2015/02/04/604569_00.png HTTP/1.1" 404 1697
+[07/Mar/2015 22:06:27] "GET /media/2015/02/04/90_O4289-OGB187_ONUL_20.jpeg HTTP/1.1" 404 1742
+[07/Mar/2015 22:06:32] "GET / HTTP/1.1" 200 4201
+[07/Mar/2015 22:06:35] "GET /orders/ HTTP/1.1" 200 33078
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 07, 2015 - 22:05:11
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.

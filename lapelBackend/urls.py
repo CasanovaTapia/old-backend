@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.models import User
 from orders.models import Order
 from clients.models import Client
+from products.models import Products
 from rest_framework import routers, serializers, viewsets
 
 # Serializers define the API representation.
@@ -23,6 +24,11 @@ class ClientSerializer(serializers.HyperlinkedModelSerializer):
 	model = Client
 	fields = ('url','full_name','phone','email','age','address','contact_method','occupation','tier','birthday','relationship_status','sales_rep','meeting_location','contact_person','profie_pic')
 
+class ProductsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+	model = Products
+	fields = ('product_name','product_type','product_size','product_color','product_material','product_price','product_order','product_pic')
+
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -36,11 +42,16 @@ class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
 
+class ProductsViewSet(viewsets.ModelViewSet):
+    queryset = Products.objects.all()
+    serializer_class = ProductsSerializer
+
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'orders',OrderViewSet)
 router.register(r'clients',ClientViewSet)
+router.register(r'products',ProductsViewSet)
 
 urlpatterns = patterns('',
     # Examples:

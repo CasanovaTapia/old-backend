@@ -19,18 +19,19 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Update Order Status</h4>
       </div>
-      <div class="modal-body">
-        Current Status: {{order.order_status}}
-	<div class="dropdown">
+      <div class="modal-body"> 
+<div class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Dropdown
-    <span class="caret"></span>
+   {{order.order_status}}
+   <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{ order.get_order_status_display }}</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Not Fullfilled</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tailoring</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Shipped</a></li>
   </ul>
-</div>
-      </div>
+</div>	
+  </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
