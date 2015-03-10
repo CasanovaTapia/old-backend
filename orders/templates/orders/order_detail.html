@@ -1,22 +1,72 @@
-<div class="col-md-10 order-detail">
-{%for product in order_detail %}
+<div class="col-md-12 order-detail">
 <div class="box effect8">
-<h1>{{client.full_name}}</h1>
-<h1>{{product.product_type}}</h1>
-<h1>{{product.product_price}}</h1>
-<h1>{{product.product_material}}</h1>
-<h1>{{product.product_color}}</h1>
-<h1>{{product.product_size}}</h1>
-</div>
-<div class="collapse-card">
-  <div class="title">
-    <i class="fa fa-check-circle fa-2x fa-fw"></i>
-    <span><!-- Optional right aligned text --></span>
-    <strong>{{product.product_name}}</strong>
-  </div>
-  <div class="body">
-    <!-- Body Text -->
-  </div>
-</div>
-</div>
+{%for client in client_detail%}
+	<div class="details-pic">
+	<img class="client-detail-pic" src="{{client.profie_pic.url}}"/>
+	</div>
+	<div class="details">
+	<label> Name:</label><p> {{client.full_name}}</p>
+	</div>
+	<div class="details">
+	<label>Phone:</label><p>{{client.phone}}</p>
+	</div>
+	<hr>
+	<br>
+	<div class="details">
+	<label>Email:</label> <p>{{client.email}}</p>
+	</div>
+	<div class="details">
+	<label>Age:</label> <p>{{client.age}}</p>
+	</div>
+	<div class="details">
+	<label>Address:</label> <p>{{client.address}}</p>
+	</div>
+	<hr>
+	<br>
+	<div class="details">
+	<label>Occupation:</label> <p>{{client.occupation}}</p>
+	</div>
+	<div class="details">
+	<label>Tier:</label> <p>{{client.tier}}</p>
+	</div>
+	<div class="details">
+	<label>Birthday:</label> <p>{{client.birthday}}</p>
+	</div>
+	<hr>
+	<br>
+	<div class="details">
+	<label>Relationship Status:</label> <p>{{client.relationship_status}}</p>
+	</div>
+	<div class="details">
+	<label>Sales Rep:</label> <p>{{client.sales_rep}}</p>
+	</div>
+	<div class="details">
+	<label>Meeting Location:</label> <p>{{client.meeting_location}}</p>
 {%endfor%}
+  </div>
+</div>
+
+<div class="col-md-12 order-product-detail">
+<table class="table table-bordered table-striped">
+<tr>
+<td>Product Name:</td>
+<td>Product Type:</td>
+<td>Product Price:</td>
+<td>Product Material:</td>
+<td>Product Color:</td>
+<td>Product Size:</td>
+</tr>
+<tbody>
+{%for product in products_detail %}
+<tr>
+<td>{{product.product_name}}</td>
+<td>{{product.product_type}}</td>
+<td>{{product.product_price}}</td>
+<td>{{product.product_material}}</td>
+<td>{{product.product_color}}</td>
+<td>{{product.product_size}}</td>
+</tr>
+{%endfor%}
+</tbody>
+</table>
+</div>

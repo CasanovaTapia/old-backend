@@ -17,12 +17,12 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
 	model = Order
-	fields = ('url','client','order_status','order_total_price','created')
+	fields = ('id','url','client','order_status','order_total_price','created')
 
 class ClientSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
 	model = Client
-	fields = ('url','full_name','phone','email','age','address','contact_method','occupation','tier','birthday','relationship_status','sales_rep','meeting_location','contact_person','profie_pic')
+	fields = ('id','url','full_name','phone','email','age','address','contact_method','occupation','tier','birthday','relationship_status','sales_rep','meeting_location','contact_person','profie_pic')
 
 class ProductsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -66,4 +66,5 @@ urlpatterns = patterns('',
 	url(r'^procurements/', include("procurements.urls")),
 	url(r'^avatar/', include('avatar.urls')),
 	url(r'^api/', include(router.urls)),
+	url(r'^docs/', include('rest_framework_swagger.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -2,8 +2,10 @@
 <div id=sidebar-wrapper>
 <div id="sidebar">
 <div class="profile">
-<hr>
 <button class="prof-btn"><img class="prof-pic" {% avatar user %} </button>
+{% if user.is_authenticated %}
+<h1>{{user.first_name}} {{user.last_name}}</h1>
+{% endif %}
 </div>
 <hr>
 <div class="sidenav">

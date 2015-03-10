@@ -287,3 +287,10 @@ March 07, 2015 - 22:05:11
 Django version 1.7.4, using settings 'lapelBackend.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+[09/Mar/2015 03:40:42] "GET /orders/ HTTP/1.1" 302 0
+[09/Mar/2015 03:40:42] "GET /page?next=/orders/ HTTP/1.1" 301 0
+[09/Mar/2015 03:40:42] "GET /page/?next=/orders/ HTTP/1.1" 200 1055
+[09/Mar/2015 03:40:43] "GET /static/page/css/sign-in.css HTTP/1.1" 304 0
+[09/Mar/2015 03:40:43] "GET /static/page/img/lapel_black-1.png HTTP/1.1" 304 0
+[09/Mar/2015 03:40:45] "GET /api/ HTTP/1.1" 200 201
+[09/Mar/2015 03:41:02] "GET /api/products/ HTTP/1.1" 200 639

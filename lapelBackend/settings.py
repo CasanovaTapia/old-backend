@@ -45,6 +45,7 @@ INSTALLED_APPS = (
 	'rest_framework',
 	'avatar',
 	'rest_framework.authtoken',
+	'rest_framework_swagger',
 )
 
 MIDDLEWARE_CLASSES = (

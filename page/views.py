@@ -21,7 +21,8 @@ def page(request,application_html):
 
 def navbar(request):
 	template_path = "page/navbar.html"
-	context = {}
+	user = request.user
+	context = {"user":user}
 	template = loader.get_template(template_path)
 	context = RequestContext(request,context)
 	return template.render(context)

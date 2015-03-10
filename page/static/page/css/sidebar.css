@@ -16,6 +16,13 @@ margin-left: -250px;
   z-index: 1000;
   transition: all 0.4s ease 0s;
 }
+.profile{
+margin-top:20px;
+}
+.profile h1{
+ font-size: 14px;
+ color:white;
+}
 
 @media (max-width:767px) {
 

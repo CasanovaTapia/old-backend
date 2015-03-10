@@ -20,24 +20,24 @@
         <h4 class="modal-title" id="myModalLabel">Update Order Status</h4>
       </div>
       <div class="modal-body"> 
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-   {{order.order_status}}
-   <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Not Fullfilled</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tailoring</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Shipped</a></li>
-  </ul>
-</div>	
+  <form  id="statusform" action="/orders/order_status_update/" method="POST"> {% csrf_token %}
+	<h2>Current Status: {{order.order_status}}</h2>
+  <select  name="orderform"class="form-control">
+  <option  name="orderstat" value="Not Fullfilled">Not Fullfilled</option>
+  <option  name="orderstat" value="Tailoring">Tailoring</option>
+  <option  name="orderstat" value="Shipped">Shipped</option>
+</select>
+  <input type="hidden" name="orderid" value ="{{order.id}}">
+  <input type="hidden" name="clientid"  value ="{{client.id}}" >
+  <input type="hidden" name="_method" value ="PUT">
   </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Update</button>
       </div>
     </div>
   </div>
+</form>
 </div>
 
 
