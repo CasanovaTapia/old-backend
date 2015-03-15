@@ -14,3 +14,10 @@ class Products(models.Model):
 	def __unicode__(self):
 		return unicode(self.product_name)
 
+
+class Brand(models.Model):
+	brand_name = models.CharField(max_length=100)
+
+	def __unicode__(self):
+		return unicode(self.brand_name)
+

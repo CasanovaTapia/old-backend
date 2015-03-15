@@ -21,6 +21,8 @@
       </div>
       <div class="modal-body"> 
   <form  id="statusform" action="/orders/order_status_update/" method="POST"> {% csrf_token %}
+	
+  	<input type="hidden" name="_method" value ="PATCH">
 	<h2>Current Status: {{order.order_status}}</h2>
   <select  name="orderform"class="form-control">
   <option  name="orderstat" value="Not Fullfilled">Not Fullfilled</option>
@@ -28,8 +30,7 @@
   <option  name="orderstat" value="Shipped">Shipped</option>
 </select>
   <input type="hidden" name="orderid" value ="{{order.id}}">
-  <input type="hidden" name="clientid"  value ="{{client.id}}" >
-  <input type="hidden" name="_method" value ="PUT">
+  <input type="hidden" name="clientid"  value ="{{order.client.id}}" >
   </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

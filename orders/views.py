@@ -7,11 +7,14 @@ from django.contrib.auth.decorators import login_required
 from products.models import Products
 import page.views as page_app
 from django.views.generic import TemplateView
+from lapelBackend.urls import OrderStatusUpdateSerializer
 from rest_framework import serializers
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from lapelBackend.urls import OrderSerializer
 from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.reverse import reverse
+
 
 @login_required(login_url='/page')
 def orders(request):
@@ -64,13 +67,13 @@ def create_order(request):
 #	Response({"order_status": status})
 #	return redirect('/orders/')
 
-@api_view(['PUT'])
+@api_view(['PATCH'])
 def order_status_update(request):
 
-	if request.method == 'PUT':
-		data = {'order_status': request.DATA.get('orderform'),'id': request.DATA.get('orderid'),'url': request.DATA.get('orderid'),'client': request.DATA.get('clientid'), 'order_price':request.DATA.get('')}
+	if request.method == 'PATCH':
+		data = {'order_status': request.DATA.get('orderform'),'id': request.DATA.get('orderid'),'client': request.DATA.get('clientid')}
 		print data
-		serializer = OrderSerializer(data=data)
+		serializer = OrderStatusUpdateSerializer(data=data)
 		if serializer.is_valid():
 			serializer.save()
 			return Response(serializer.data, status=status.HTTP_201_CREATED)

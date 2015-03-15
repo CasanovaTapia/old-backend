@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.models import User
 from orders.models import Order
 from clients.models import Client
-from products.models import Products
+from products.models import Products, Brand
 from rest_framework import routers, serializers, viewsets
 
 # Serializers define the API representation.
@@ -14,10 +14,15 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'username', 'email', 'is_staff')
 
-class OrderSerializer(serializers.HyperlinkedModelSerializer):
+class OrderSerializer(serializers.ModelSerializer):
     class Meta:
 	model = Order
 	fields = ('id','url','client','order_status','order_total_price','created')
+
+class OrderStatusUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+	model = Order
+	fields = ('id','order_status','client')
 
 class ClientSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -28,6 +33,12 @@ class ProductsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
 	model = Products
 	fields = ('product_name','product_type','product_size','product_color','product_material','product_price','product_order','product_pic')
+
+class BrandSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Brand
+        fields = ('id','brand_name')
+
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
@@ -46,13 +57,18 @@ class ProductsViewSet(viewsets.ModelViewSet):
     queryset = Products.objects.all()
     serializer_class = ProductsSerializer
 
+class BrandViewSet(viewsets.ModelViewSet):
+    queryset = Brand.objects.all()
+    serializer_class = BrandSerializer
+
+
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'orders',OrderViewSet)
 router.register(r'clients',ClientViewSet)
 router.register(r'products',ProductsViewSet)
-
+router.register(r'brands',BrandViewSet)
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'lapelBackend.views.home', name='home'),
