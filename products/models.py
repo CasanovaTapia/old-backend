@@ -17,7 +17,7 @@ class Products(models.Model):
 
 class Brand(models.Model):
 	brand_name = models.CharField(max_length=100)
-
+	brand_pic = models.FileField(upload_to='%Y/%m/%d/')
 	def __unicode__(self):
 		return unicode(self.brand_name)
 
