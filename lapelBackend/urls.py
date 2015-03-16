@@ -37,7 +37,7 @@ class ProductsSerializer(serializers.HyperlinkedModelSerializer):
 class BrandSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Brand
-        fields = ('id','brand_name')
+        fields = ('id','brand_name','brand_pic')
 
 
 # ViewSets define the view behavior.
