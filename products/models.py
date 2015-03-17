@@ -1,5 +1,6 @@
 from django.db import models
 from orders.models import Order
+from clients.models import Client
 
 class Products(models.Model):
 	product_name = models.CharField(max_length=100)
@@ -31,3 +32,9 @@ class Lookbook(models.Model):
 	lookbook_name = models.CharField(max_length=100)
 	def __unicode__(self):
 		return unicode(self.id)
+
+class Likes(models.Model):
+        client_likes = models.ManyToManyField(Client)
+        lookbook_likes = models.ManyToManyField(Lookbook)
+        def __unicode__(self):
+                return unicode(self.id)

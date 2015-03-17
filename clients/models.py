@@ -23,6 +23,7 @@ class Interests(models.Model):
 	client_interests = models.ManyToManyField(Client)
 	interest = models.CharField(max_length=50)
 
+
 class Subscriptions(models.Model):
 	client_subscriptions = models.ManyToManyField(Client)
 	subscription = models.CharField(max_length=50)	

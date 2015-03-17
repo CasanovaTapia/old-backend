@@ -39,6 +39,24 @@ def detail(request,id):
 	return page_app.page(request,clients_html)
 
 
+def createClient(request):
+	if request.method == 'POST':
+		full_name = request.POST.get("full_name", "")
+		phone = request.POST.get("phone", "")
+		email = request.POST.get("email", "")
+		age = request.POST.get("age", "")
+		address = request.POST.get("address", "")
+		pic = request.FILES["profie_pic"]
+		model = Client()
+		model.profie_pic = pic
+		model.full_name = full_name
+		model.phone = phone
+		model.email = email
+		model.age = age
+		model.address = address
+		model.save()
+		return HttpResponseRedirect('/clients/')
+
 def profileUpload(request):
     # Handle file upload
     if request.method == 'POST':
@@ -48,3 +66,4 @@ def profileUpload(request):
             newpic.save()
 
 	return (request)
+

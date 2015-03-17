@@ -259,6 +259,9 @@ text-align:center;
 .top-ten-outside{
 border:1px solid white;
 }
+.modal-open{
+overflow:scroll;
+}
 .modal-content{
 background-image: url("/static/page/img/tweed.png");
 background-size:cover;
