@@ -31,6 +31,7 @@
 <script src="{{STATIC_URL}}page/js/mixitup.min.js"></script>
 <script src="{{STATIC_URL}}page/js/countUp.min.js"></script>
 <script src="{{STATIC_URL}}page/js/move.min.js"></script>
+<script src="{{STATIC_URL}}page/js/jspdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.7.3/chartist.min.js"></script>
 <script>
 $(function() {
@@ -78,6 +79,29 @@ $(function() {
     }, 200 );
   });
 })
+</script>
+
+<script>
+$(document).ready(function(){
+var specialElementHandlers = {
+            '#editor': function (element,renderer) {
+                return true;
+            }
+        };
+        $('#cmd').click(function () {
+            var doc = new jsPDF();
+            var source = $('#order-detail').html();
+            var specialElementHandlers = {
+                '#bypassme': function (element, renderer) {
+                    return true;
+                }
+            };
+            doc.fromHTML(source, 0.5, 0.5, {
+                'width': 75,'elementHandlers': specialElementHandlers
+            });
+            doc.output("dataurlnewwindow");
+        });
+    });
 </script>
 
 <script>

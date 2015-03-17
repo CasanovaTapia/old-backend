@@ -45,10 +45,10 @@ class LookbookCategorySerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id','category_name')
 
 
-class LookbookSerializer(serializers.HyperlinkedModelSerializer):
+class LookbookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lookbook
-        fields = ('id','category','lookbook_pic')
+        fields = ('id','category','lookbook_pic','lookbook_name')
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):

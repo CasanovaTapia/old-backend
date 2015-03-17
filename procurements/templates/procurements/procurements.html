@@ -1,3 +1,9 @@
+<div class="col-md-12 add-client-btn">
+	<div class="add-client">
+	<button data-toggle="modal" data-target="#addProcurement">Add Procurement</button>
+	</div>
+</div>
+
 <div class="procurements-header col-md-12">
 <table class="table table-bordered table-striped">
  <tr>
@@ -18,6 +24,45 @@
 </tbody>
 </table>
 </div>
+
+<!--Add Procurement Modal-->
+
+<div class="modal fade" id="addProcurement" tabindex="-1" role="dialog" aria-labelledby="addClient" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Procurement</h4>
+      </div>
+      <div class="client-add modal-body">
+<form>
+  <div class="form-group">
+    <label for="Brand Name">Brand Name</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Brand Name">
+  </div>
+  <div class="form-group">
+    <label for="Sales Rep">Sales Rep</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Sales Rep">
+  </div>
+  <div class="form-group">
+    <label for="Sku#">Sku#</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Sku #">
+  </div>
+  <div class="form-group">
+    <label for="Price">Price</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Price">
+  </div>
+ </div>
+</form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 <script>
 $('#procurements').addClass('active');

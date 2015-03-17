@@ -28,5 +28,6 @@ class LookbookCategory(models.Model):
 class Lookbook(models.Model):
 	category = models.ForeignKey('products.LookbookCategory')
 	lookbook_pic = models.FileField(upload_to='%Y/%m/%d/',null=True, blank=True)
+	lookbook_name = models.CharField(max_length=100)
 	def __unicode__(self):
 		return unicode(self.id)

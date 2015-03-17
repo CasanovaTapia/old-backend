@@ -259,3 +259,19 @@ text-align:center;
 .top-ten-outside{
 border:1px solid white;
 }
+.modal-content{
+background-image: url("/static/page/img/tweed.png");
+background-size:cover;
+}
+.modal-title{
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+color:white;
+font-size:20px;
+}
+.modal label{
+-webkit-font-smoothing:antialiased;
+font-family: 'Raleway', sans-serif;
+color:white;
+font-size:14px;
+}
