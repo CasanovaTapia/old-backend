@@ -3480,3 +3480,656 @@ Quit the server with CONTROL-C.
 [17/Mar/2015 08:10:04] "GET /media/2015-03-16%2017%3A02%3A43.373823%2B00%3A00 HTTP/1.1" 404 1720
 [17/Mar/2015 08:10:04] "GET /media/2015-03-16%2017%3A02%3A43.373823%2B00%3A00 HTTP/1.1" 404 1720
 [17/Mar/2015 08:10:04] "GET /media/2015-03-16%2017%3A02%3A43.373823%2B00%3A00 HTTP/1.1" 404 1720
+[17/Mar/2015 08:21:21] "GET /api/ HTTP/1.1" 200 235
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:09:45
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:25:10
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7f24f3a3fb90>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 222, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/runserver.py", line 105, in inner_run
+    self.validate(display_num_errors=True)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 362, in validate
+    return self.check(app_configs=app_configs, display_num_errors=display_num_errors)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 414, in check
+    raise CommandError(msg)
+django.core.management.base.CommandError: System check identified some issues:
+
+ERRORS:
+products.Lookbook.category: (fields.E300) Field defines a relation with model 'category.LookbookCategory', which is either not installed, or is abstract.
+
+System check identified 1 issue (0 silenced).
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:29:11
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 354, in execute
+    django.setup()
+  File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 21, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/apps.py", line 22, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 23, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 74, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/ubuntu/lapel-backend/products/admin.py", line 8, in <module>
+    admin.site.register(LookbookCategory)
+NameError: name 'LookbookCategory' is not defined
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 354, in execute
+    django.setup()
+  File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 21, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/apps.py", line 22, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 23, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 74, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/ubuntu/lapel-backend/products/admin.py", line 8, in <module>
+    admin.site.register(LookbookCategory)
+NameError: name 'LookbookCategory' is not defined
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 354, in execute
+    django.setup()
+  File "/usr/local/lib/python2.7/dist-packages/django/__init__.py", line 21, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python2.7/dist-packages/django/apps/registry.py", line 115, in populate
+    app_config.ready()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/apps.py", line 22, in ready
+    self.module.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 23, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 74, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/ubuntu/lapel-backend/products/admin.py", line 8, in <module>
+    admin.site.register(LookbookCategory)
+NameError: name 'LookbookCategory' is not defined
+[17/Mar/2015 08:33:55] "GET / HTTP/1.1" 200 6216
+[17/Mar/2015 08:34:00] "GET /admin/ HTTP/1.1" 200 11358
+[17/Mar/2015 08:34:09] "GET /admin/products/lookbookcategory/add/ HTTP/1.1" 200 3680
+[17/Mar/2015 08:34:09] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:35:13] "POST /admin/products/lookbookcategory/add/ HTTP/1.1" 302 0
+[17/Mar/2015 08:35:13] "GET /admin/products/lookbookcategory/ HTTP/1.1" 200 4497
+[17/Mar/2015 08:35:13] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:35:19] "GET /admin/products/lookbookcategory/add/ HTTP/1.1" 200 3680
+[17/Mar/2015 08:35:19] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:35:56] "POST /admin/products/lookbookcategory/add/ HTTP/1.1" 302 0
+[17/Mar/2015 08:35:56] "GET /admin/products/lookbookcategory/ HTTP/1.1" 200 4741
+[17/Mar/2015 08:35:56] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:35:59] "GET /admin/products/lookbookcategory/add/ HTTP/1.1" 200 3680
+[17/Mar/2015 08:36:00] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:36:09] "POST /admin/products/lookbookcategory/add/ HTTP/1.1" 302 0
+[17/Mar/2015 08:36:09] "GET /admin/products/lookbookcategory/ HTTP/1.1" 200 4984
+[17/Mar/2015 08:36:10] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:36:13] "GET /admin/products/ HTTP/1.1" 200 3597
+[17/Mar/2015 08:36:16] "GET /admin/products/lookbook/ HTTP/1.1" 200 3043
+[17/Mar/2015 08:36:16] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:36:21] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4451
+[17/Mar/2015 08:36:21] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:33:49
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 08:39:00] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 08:39:00] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:39:00] "GET /static/admin/js/jquery.js HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[17/Mar/2015 08:39:00] "GET /static/admin/img/icon_addlink.gif HTTP/1.1" 304 0
+[17/Mar/2015 08:39:01] "GET /static/admin/img/nav-bg.gif HTTP/1.1" 304 0
+[17/Mar/2015 08:39:06] "GET /admin/products/lookbook/ HTTP/1.1" 200 3043
+[17/Mar/2015 08:39:06] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:38:42
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 08:43:18] "GET /admin/ HTTP/1.1" 200 11466
+[17/Mar/2015 08:43:19] "GET /api/ HTTP/1.1" 200 235
+[17/Mar/2015 08:43:38] "GET /api/ HTTP/1.1" 200 235
+[17/Mar/2015 08:43:43] "GET /api/products/ HTTP/1.1" 200 1525
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:41:45
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 08:44:37] "GET /api/ HTTP/1.1" 200 285
+[17/Mar/2015 08:44:39] "GET /api/lookbook/ HTTP/1.1" 200 2
+[17/Mar/2015 08:45:38] "GET /admin/ HTTP/1.1" 200 11466
+[17/Mar/2015 08:45:45] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 08:45:45] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:49:07] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 08:49:07] "GET /admin/products/lookbook/ HTTP/1.1" 200 4357
+[17/Mar/2015 08:49:08] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 08:49:15] "GET /admin/ HTTP/1.1" 200 11454
+[17/Mar/2015 08:49:16] "GET /api/ HTTP/1.1" 200 285
+[17/Mar/2015 08:49:18] "GET /api/lookbook/ HTTP/1.1" 500 106116
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:44:30
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 08:51:17] "GET /api/lookbook/ HTTP/1.1" 500 106068
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:51:07
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 08:52:15] "GET /api/lookbook/ HTTP/1.1" 500 117462
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:52:07
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 08:56:28] "GET /api/lookbook/ HTTP/1.1" 500 106068
+[17/Mar/2015 08:56:33] "GET /api/lookbook/ HTTP/1.1" 500 106068
+[17/Mar/2015 08:56:43] "GET /api/lookbook/ HTTP/1.1" 500 106068
+[17/Mar/2015 08:59:17] "HEAD / HTTP/1.0" 302 0
+[17/Mar/2015 09:04:25] "GET /api/ HTTP/1.1" 200 285
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 08:54:54
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:07:16] "GET /api/ HTTP/1.1" 200 285
+[17/Mar/2015 09:07:19] "GET /api/lookbook/ HTTP/1.1" 500 106116
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:06:38
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:08:11] "GET /api/ HTTP/1.1" 500 66225
+[17/Mar/2015 09:08:29] "GET /api/ HTTP/1.1" 200 351
+[17/Mar/2015 09:08:32] "GET /api/lookbookCategory/ HTTP/1.1" 200 109
+[17/Mar/2015 09:08:36] "GET /api/lookbook/ HTTP/1.1" 200 136
+[17/Mar/2015 09:08:56] "GET /api/lookbookCategory/1/ HTTP/1.1" 200 33
+[17/Mar/2015 09:10:59] "GET /api/lookbookCategory/ HTTP/1.1" 200 109
+[17/Mar/2015 09:11:10] "GET /api/lookbook/ HTTP/1.1" 200 136
+[17/Mar/2015 09:11:16] "GET /api/lookbookCategory/1/ HTTP/1.1" 200 33
+[17/Mar/2015 09:11:34] "GET /admin/ HTTP/1.1" 200 11454
+[17/Mar/2015 09:11:39] "GET /admin/products/lookbook/ HTTP/1.1" 200 4215
+[17/Mar/2015 09:11:40] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:13:56] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:13:56] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:13] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:14:13] "GET /admin/products/lookbook/ HTTP/1.1" 200 4571
+[17/Mar/2015 09:14:13] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:17] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:14:17] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:28] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:14:28] "GET /admin/products/lookbook/ HTTP/1.1" 200 4784
+[17/Mar/2015 09:14:29] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:34] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:14:34] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:43] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:14:44] "GET /admin/products/lookbook/ HTTP/1.1" 200 4997
+[17/Mar/2015 09:14:44] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:46] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:14:46] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:54] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:14:55] "GET /admin/products/lookbook/ HTTP/1.1" 200 5210
+[17/Mar/2015 09:14:55] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:14:59] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:14:59] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:15:12] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:15:12] "GET /admin/products/lookbook/6/ HTTP/1.1" 200 4918
+[17/Mar/2015 09:15:12] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:15:15] "POST /admin/products/lookbook/6/ HTTP/1.1" 302 0
+[17/Mar/2015 09:15:15] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4586
+[17/Mar/2015 09:15:15] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:15:35] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:15:35] "GET /admin/products/lookbook/ HTTP/1.1" 200 5636
+[17/Mar/2015 09:15:36] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:15:39] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:15:39] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:15:50] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:15:50] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4584
+[17/Mar/2015 09:15:51] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:16:11] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:16:11] "GET /admin/products/lookbook/ HTTP/1.1" 200 6062
+[17/Mar/2015 09:16:12] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:16:15] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:16:15] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:16:25] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:16:25] "GET /admin/products/lookbook/ HTTP/1.1" 200 6282
+[17/Mar/2015 09:16:25] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:16:34] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:16:34] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:16:58] "GET /admin/products/lookbook/ HTTP/1.1" 200 6139
+[17/Mar/2015 09:16:58] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:01] "GET /admin/products/lookbook/10/ HTTP/1.1" 200 4730
+[17/Mar/2015 09:17:01] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:06] "POST /admin/products/lookbook/10/ HTTP/1.1" 302 0
+[17/Mar/2015 09:17:06] "GET /admin/products/lookbook/ HTTP/1.1" 200 6284
+[17/Mar/2015 09:17:06] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:09] "GET /admin/products/lookbook/9/ HTTP/1.1" 200 4729
+[17/Mar/2015 09:17:09] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:13] "POST /admin/products/lookbook/9/ HTTP/1.1" 302 0
+[17/Mar/2015 09:17:14] "GET /admin/products/lookbook/ HTTP/1.1" 200 6283
+[17/Mar/2015 09:17:14] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:16] "GET /admin/products/lookbook/8/ HTTP/1.1" 200 4743
+[17/Mar/2015 09:17:16] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:20] "POST /admin/products/lookbook/8/ HTTP/1.1" 302 0
+[17/Mar/2015 09:17:21] "GET /admin/products/lookbook/ HTTP/1.1" 200 6283
+[17/Mar/2015 09:17:21] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:23] "GET /admin/products/lookbook/7/ HTTP/1.1" 200 4729
+[17/Mar/2015 09:17:23] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:27] "POST /admin/products/lookbook/7/ HTTP/1.1" 302 0
+[17/Mar/2015 09:17:28] "GET /admin/products/lookbook/ HTTP/1.1" 200 6283
+[17/Mar/2015 09:17:28] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:30] "GET /admin/products/lookbook/6/ HTTP/1.1" 200 4747
+[17/Mar/2015 09:17:31] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:34] "POST /admin/products/lookbook/6/ HTTP/1.1" 302 0
+[17/Mar/2015 09:17:35] "GET /admin/products/lookbook/ HTTP/1.1" 200 6283
+[17/Mar/2015 09:17:35] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:37] "GET /admin/products/lookbook/5/ HTTP/1.1" 200 4727
+[17/Mar/2015 09:17:37] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:40] "POST /admin/products/lookbook/5/ HTTP/1.1" 302 0
+[17/Mar/2015 09:17:40] "GET /admin/products/lookbook/ HTTP/1.1" 200 6283
+[17/Mar/2015 09:17:41] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:17:43] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4406
+[17/Mar/2015 09:17:44] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:18:11] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:18:12] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4585
+[17/Mar/2015 09:18:12] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:18:30] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:18:30] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4585
+[17/Mar/2015 09:18:30] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:18:39] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:18:39] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4585
+[17/Mar/2015 09:18:39] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:18:57] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:18:58] "GET /admin/products/lookbook/add/ HTTP/1.1" 200 4585
+[17/Mar/2015 09:18:58] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:19:08] "POST /admin/products/lookbook/add/ HTTP/1.1" 302 0
+[17/Mar/2015 09:19:09] "GET /admin/products/lookbook/ HTTP/1.1" 200 7362
+[17/Mar/2015 09:19:09] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:19:15] "GET /admin/ HTTP/1.1" 200 11320
+[17/Mar/2015 09:19:16] "GET /api/ HTTP/1.1" 200 351
+[17/Mar/2015 09:19:20] "GET /api/lookbook/ HTTP/1.1" 200 2096
+[17/Mar/2015 09:19:33] "GET /media/2015/03/17/pic1.jpg HTTP/1.1" 200 418928
+[17/Mar/2015 09:19:40] "GET / HTTP/1.1" 200 6216
+[17/Mar/2015 09:19:43] "GET /clients HTTP/1.1" 301 0
+[17/Mar/2015 09:19:43] "GET /clients/ HTTP/1.1" 500 163138
+[17/Mar/2015 09:20:32] "GET /orders HTTP/1.1" 301 0
+[17/Mar/2015 09:20:34] "GET /orders/ HTTP/1.1" 200 108780
+[17/Mar/2015 09:20:52] "GET /clients/ HTTP/1.1" 500 163166
+[17/Mar/2015 09:20:59] "GET /admin/ HTTP/1.1" 200 11320
+[17/Mar/2015 09:21:04] "GET /admin/clients/client/ HTTP/1.1" 200 5744
+[17/Mar/2015 09:21:04] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:21:11] "GET /admin/clients/client/1/ HTTP/1.1" 200 10280
+[17/Mar/2015 09:21:11] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:21:14] "GET /media/2015/03/17/ovitz.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:21:20] "GET /admin/ HTTP/1.1" 200 11320
+[17/Mar/2015 09:21:20] "GET / HTTP/1.1" 200 6216
+[17/Mar/2015 09:21:23] "GET /clients/ HTTP/1.1" 500 163138
+[17/Mar/2015 09:21:41] "GET /admin/ HTTP/1.1" 200 11320
+[17/Mar/2015 09:21:43] "GET /admin/clients/client/ HTTP/1.1" 200 5744
+[17/Mar/2015 09:21:43] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:21:53] "POST /admin/clients/client/ HTTP/1.1" 200 2328
+[17/Mar/2015 09:21:55] "POST /admin/clients/client/ HTTP/1.1" 302 0
+[17/Mar/2015 09:21:55] "GET /admin/clients/client/ HTTP/1.1" 200 5653
+[17/Mar/2015 09:21:55] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:21:59] "GET /admin/ HTTP/1.1" 200 11279
+[17/Mar/2015 09:22:00] "GET / HTTP/1.1" 200 6216
+[17/Mar/2015 09:22:02] "GET /clients/ HTTP/1.1" 200 9249
+[17/Mar/2015 09:22:02] "GET /media/2015/03/17/drew.jpeg HTTP/1.1" 200 5056
+[17/Mar/2015 09:22:02] "GET /media/2015/03/17/unclemike.jpeg HTTP/1.1" 200 5542
+[17/Mar/2015 09:22:02] "GET /media/2015/03/17/zuck.jpeg HTTP/1.1" 200 5991
+[17/Mar/2015 09:22:02] "GET /media/2015/03/17/madmax.jpg HTTP/1.1" 200 35626
+[17/Mar/2015 09:22:02] "GET /media/2015/03/17/taylor.jpeg HTTP/1.1" 200 11302
+[17/Mar/2015 09:22:02] "GET /media/2015/03/17/arne.png HTTP/1.1" 200 164862
+[17/Mar/2015 09:22:27] "GET /clients/3/ HTTP/1.1" 500 204676
+[17/Mar/2015 09:22:46] "GET /admin/ HTTP/1.1" 200 11279
+[17/Mar/2015 09:22:52] "GET /admin/products/products/ HTTP/1.1" 200 5197
+[17/Mar/2015 09:22:52] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:23:22] "POST /admin/products/products/ HTTP/1.1" 200 2925
+[17/Mar/2015 09:23:24] "POST /admin/products/products/ HTTP/1.1" 302 0
+[17/Mar/2015 09:23:24] "GET /admin/products/products/ HTTP/1.1" 200 4618
+[17/Mar/2015 09:23:25] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:23:29] "GET /admin/products/products/2/ HTTP/1.1" 200 8235
+[17/Mar/2015 09:23:29] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:23:31] "GET /media/2015/02/04/90_O4289-OGB187_ONUL_20.jpeg HTTP/1.1" 404 1739
+[17/Mar/2015 09:24:00] "POST /admin/products/products/2/ HTTP/1.1" 302 0
+[17/Mar/2015 09:24:01] "GET /admin/products/products/ HTTP/1.1" 200 4660
+[17/Mar/2015 09:24:01] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:24:03] "GET /admin/products/products/1/ HTTP/1.1" 200 8234
+[17/Mar/2015 09:24:04] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:24:11] "POST /admin/products/products/1/ HTTP/1.1" 302 0
+[17/Mar/2015 09:24:11] "GET /admin/products/products/ HTTP/1.1" 200 4678
+[17/Mar/2015 09:24:12] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[17/Mar/2015 09:24:16] "GET /admin/ HTTP/1.1" 200 11283
+[17/Mar/2015 09:24:17] "GET / HTTP/1.1" 200 6216
+[17/Mar/2015 09:24:19] "GET /clients/ HTTP/1.1" 200 9249
+[17/Mar/2015 09:24:21] "GET /clients/3/ HTTP/1.1" 200 9292
+[17/Mar/2015 09:24:21] "GET /static/page/img/belt.png HTTP/1.1" 200 2144
+[17/Mar/2015 09:24:21] "GET /static/page/img/captoe.png HTTP/1.1" 200 2313
+[17/Mar/2015 09:24:21] "GET /static/page/img/oxford.png HTTP/1.1" 200 1948
+[17/Mar/2015 09:24:21] "GET /static/page/img/sunglasses.png HTTP/1.1" 200 2613
+[17/Mar/2015 09:24:22] "GET /media/2015/03/17/versace.jpg HTTP/1.1" 200 147008
+[17/Mar/2015 09:24:22] "GET /media/2015/03/17/sneakers.png HTTP/1.1" 200 132698
+[17/Mar/2015 09:24:22] "GET /static/page/img/tie.png HTTP/1.1" 200 1719
+[17/Mar/2015 09:24:22] "GET /static/page/img/button3.png HTTP/1.1" 200 4352
+[17/Mar/2015 09:25:02] "GET /orders/ HTTP/1.1" 200 96364
+[17/Mar/2015 09:25:08] "POST /orders/order_status_update/ HTTP/1.1" 201 47
+[17/Mar/2015 09:25:16] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:25:20] "GET /clients/ HTTP/1.1" 200 9249
+[17/Mar/2015 09:25:22] "GET /clients/3/ HTTP/1.1" 200 9581
+[17/Mar/2015 09:25:22] "GET /media/2015/03/17/sneakers.png HTTP/1.1" 304 0
+[17/Mar/2015 09:25:22] "GET /media/2015/03/17/versace.jpg HTTP/1.1" 304 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:08:07
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+{'order_status': u'Tailoring', 'client': u'3', 'id': u'1'}
+[17/Mar/2015 09:27:49] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:27:58] "POST /orders/order_status_update/ HTTP/1.1" 500 85851
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:27:42
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:29:49] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:29:54] "POST /orders/order_status_update/ HTTP/1.1" 500 85851
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:28:32
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:31:59] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:32:02] "POST /orders/order_status_update/ HTTP/1.1" 500 89260
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:31:53
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+{'order_status': u'Not Fullfilled', 'client': u'1', 'id': u'2'}
+2
+[17/Mar/2015 09:33:42] "GET /orders/ HTTP/1.1" 500 102051
+[17/Mar/2015 09:34:08] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:34:09] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/css/index.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/css/clients.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/css/orders.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/css/paper-collapse.min.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/css/procurements.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/css/navbar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:34:09] "GET /static/page/img/linen.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/js/paper-collapse.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/js/countUp.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/js/mixitup.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:09] "GET /static/page/js/move.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:10] "GET /static/page/css/index.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:10] "GET /static/page/css/navbar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:10] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:10] "GET /static/page/css/clients.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:10] "GET /static/page/css/orders.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:10] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:34:10] "GET /static/page/css/paper-collapse.min.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:10] "GET /static/page/css/procurements.css HTTP/1.1" 304 0
+[17/Mar/2015 09:34:11] "GET /static/page/js/paper-collapse.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:11] "GET /static/page/js/mixitup.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:11] "GET /static/page/js/countUp.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:11] "GET /static/page/js/move.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:34:11] "GET /static/page/img/linen.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:34:13] "POST /orders/order_status_update/ HTTP/1.1" 500 89260
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:33:34
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+{'order_status': u'Not Fullfilled', 'client': u'1', 'id': u'2'}
+2
+[17/Mar/2015 09:36:13] "GET /orders/ HTTP/1.1" 200 106435
+[17/Mar/2015 09:36:20] "POST /orders/order_status_update/2 HTTP/1.1" 404 3621
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:35:17
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:37:12] "GET /orders/order_status_update/2 HTTP/1.1" 404 3620
+[17/Mar/2015 09:37:17] "GET /orders/ HTTP/1.1" 200 106435
+[17/Mar/2015 09:37:22] "POST /orders/order_status_update/2 HTTP/1.1" 404 3621
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:37:09
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:39:40] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:39:43] "POST /orders/order_status_update/ HTTP/1.1" 500 89090
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:39:29
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+{'order_status': u'Not Fullfilled', 'client': u'1', 'id': u'2'}
+[17/Mar/2015 09:41:58] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:42:02] "POST /orders/order_status_update/ HTTP/1.1" 500 89354
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:41:50
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:43:05] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:43:11] "POST /orders/order_status_update/ HTTP/1.1" 500 89349
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:42:59
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:43:32] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:43:37] "POST /orders/order_status_update/ HTTP/1.1" 201 51
+[17/Mar/2015 09:43:44] "GET /orders/ HTTP/1.1" 200 106407
+[17/Mar/2015 09:43:53] "POST /orders/order_status_update/ HTTP/1.1" 201 46
+[17/Mar/2015 09:44:00] "GET /orders/ HTTP/1.1" 200 106367
+[17/Mar/2015 09:44:06] "POST /orders/order_status_update/ HTTP/1.1" 201 44
+[17/Mar/2015 09:44:11] "GET /orders/ HTTP/1.1" 200 106351
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:43:27
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:47:35] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:47:35] "GET /static/page/css/navbar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:47:35] "GET /static/page/css/index.css HTTP/1.1" 304 0
+[17/Mar/2015 09:47:35] "GET /static/page/css/clients.css HTTP/1.1" 304 0
+[17/Mar/2015 09:47:35] "GET /static/page/css/orders.css HTTP/1.1" 304 0
+[17/Mar/2015 09:47:35] "GET /static/page/css/paper-collapse.min.css HTTP/1.1" 304 0
+[17/Mar/2015 09:47:35] "GET /static/page/css/procurements.css HTTP/1.1" 304 0
+[17/Mar/2015 09:47:35] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:47:35] "GET /static/page/img/linen.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:47:36] "GET /static/page/js/paper-collapse.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:47:36] "GET /static/page/js/mixitup.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:47:36] "GET /static/page/js/countUp.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:47:36] "GET /static/page/js/move.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:47:39] "POST /orders/order_status_update/ HTTP/1.1" 201 51
+[17/Mar/2015 09:47:44] "GET /orders/ HTTP/1.1" 200 106407
+[17/Mar/2015 09:47:49] "POST /orders/order_status_update/ HTTP/1.1" 201 44
+[17/Mar/2015 09:47:55] "GET /orders/ HTTP/1.1" 200 106351
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:47:29
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+[17/Mar/2015 09:48:56] "GET /static/page/css/index.css HTTP/1.1" 304 0
+[17/Mar/2015 09:48:56] "GET /static/page/css/navbar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:48:56] "GET /static/page/css/clients.css HTTP/1.1" 304 0
+[17/Mar/2015 09:48:56] "GET /static/page/css/orders.css HTTP/1.1" 304 0
+[17/Mar/2015 09:48:56] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:48:56] "GET /static/page/css/paper-collapse.min.css HTTP/1.1" 304 0
+[17/Mar/2015 09:48:56] "GET /static/page/css/procurements.css HTTP/1.1" 304 0
+[17/Mar/2015 09:48:56] "GET /static/page/img/linen.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:48:57] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:48:57] "GET /static/page/js/paper-collapse.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:48:57] "GET /static/page/js/mixitup.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:48:57] "GET /static/page/js/countUp.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:48:57] "GET /static/page/js/move.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:49:02] "POST /orders/order_status_update/ HTTP/1.1" 201 44
+[17/Mar/2015 09:49:08] "GET /orders/ HTTP/1.1" 200 106295
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:48:54
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7fa8b4a70c08>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 229, in wrapper
+    filename = traceback.extract_tb(tb)[-1][0]
+TypeError: 'NoneType' object is not callable
+[17/Mar/2015 09:49:27] "GET /static/page/css/index.css HTTP/1.1" 304 0
+[17/Mar/2015 09:49:27] "GET /static/page/css/navbar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:49:27] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:49:27] "GET /static/page/css/clients.css HTTP/1.1" 304 0
+[17/Mar/2015 09:49:27] "GET /static/page/css/orders.css HTTP/1.1" 304 0
+[17/Mar/2015 09:49:27] "GET /static/page/css/paper-collapse.min.css HTTP/1.1" 304 0
+[17/Mar/2015 09:49:27] "GET /static/page/css/procurements.css HTTP/1.1" 304 0
+[17/Mar/2015 09:49:28] "GET /static/page/img/linen.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:49:28] "GET /orders/ HTTP/1.1" 200 106295
+[17/Mar/2015 09:49:28] "GET /static/page/js/paper-collapse.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:49:28] "GET /static/page/js/move.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:49:28] "GET /static/page/js/countUp.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:49:28] "GET /static/page/js/mixitup.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:49:33] "POST /orders/order_status_update/ HTTP/1.1" 302 0
+[17/Mar/2015 09:49:34] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:49:43] "POST /orders/order_status_update/ HTTP/1.1" 302 0
+[17/Mar/2015 09:49:44] "GET /orders/ HTTP/1.1" 200 106295
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2015 - 09:49:25
+Django version 1.7.4, using settings 'lapelBackend.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7f3917916c08>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 222, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/runserver.py", line 134, in inner_run
+    ipv6=self.use_ipv6, threading=threading)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 178, in run
+    httpd.serve_forever()
+  File "/usr/lib/python2.7/SocketServer.py", line 235, in serve_forever
+    r, w, e = _eintr_retry(select.select, [self], [], [],
+AttributeError: 'NoneType' object has no attribute 'select'
+[17/Mar/2015 09:51:08] "GET /static/page/css/navbar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:51:08] "GET /static/page/css/sidebar.css HTTP/1.1" 304 0
+[17/Mar/2015 09:51:08] "GET /static/page/css/orders.css HTTP/1.1" 304 0
+[17/Mar/2015 09:51:08] "GET /static/page/css/index.css HTTP/1.1" 304 0
+[17/Mar/2015 09:51:08] "GET /static/page/css/clients.css HTTP/1.1" 304 0
+[17/Mar/2015 09:51:08] "GET /static/page/css/paper-collapse.min.css HTTP/1.1" 304 0
+[17/Mar/2015 09:51:08] "GET /static/page/css/procurements.css HTTP/1.1" 304 0
+[17/Mar/2015 09:51:09] "GET /static/page/img/linen.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:09] "GET /orders/ HTTP/1.1" 200 106295
+[17/Mar/2015 09:51:09] "GET /static/page/js/paper-collapse.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:51:09] "GET /static/page/js/mixitup.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:51:09] "GET /static/page/js/countUp.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:51:09] "GET /static/page/js/move.min.js HTTP/1.1" 304 0
+[17/Mar/2015 09:51:20] "POST /orders/order_status_update/ HTTP/1.1" 302 0
+[17/Mar/2015 09:51:21] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:51:28] "GET /clients/ HTTP/1.1" 200 9249
+[17/Mar/2015 09:51:28] "GET /media/2015/03/17/ovitz.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:28] "GET /media/2015/03/17/zuck.jpeg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:28] "GET /media/2015/03/17/drew.jpeg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:28] "GET /media/2015/03/17/unclemike.jpeg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:28] "GET /media/2015/03/17/madmax.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:29] "GET /media/2015/03/17/arne.png HTTP/1.1" 304 0
+[17/Mar/2015 09:51:34] "GET /media/2015/03/17/taylor.jpeg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:35] "GET /admin/ HTTP/1.1" 200 11283
+[17/Mar/2015 09:51:35] "GET /admin/ HTTP/1.1" 200 11283
+[17/Mar/2015 09:51:42] "GET /clients/7/ HTTP/1.1" 200 9930
+[17/Mar/2015 09:51:42] "GET /media/2015/03/17/sneakers.png HTTP/1.1" 304 0
+[17/Mar/2015 09:51:42] "GET /media/2015/03/17/versace.jpg HTTP/1.1" 304 0
+[17/Mar/2015 09:51:52] "GET /orders/ HTTP/1.1" 200 106351
+[17/Mar/2015 09:52:40] "GET /orders/2/ HTTP/1.1" 200 7576

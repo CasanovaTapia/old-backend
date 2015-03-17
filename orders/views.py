@@ -55,26 +55,13 @@ def create_order(request):
 	return page_app.page(request,create_order_html)
 
 
-#def order_status_update(request):
-#	
-#	update_order = request.POST.get('orderform', '')
-#	order_id = request.POST.get('orderid', '')
-#	
-#	print update_order
-#	print order_id
-#
-#	#if request.method == 'POST':
-#	Response({"order_status": status})
-#	return redirect('/orders/')
-
 @api_view(['PUT'])
 def order_status_update(request):
-
 	if request.method == 'PUT':
 		data = {'order_status': request.DATA.get('orderform'),'id': request.DATA.get('orderid'),'client': request.DATA.get('clientid')}
-		print data
-		serializer = OrderStatusUpdateSerializer(data=data)
+		pk = request.POST.get("orderid", "")
+		serializer = OrderStatusUpdateSerializer(instance=Order.objects.get(pk = pk), data=data) 
 		if serializer.is_valid():
 			serializer.save()
-			return Response(serializer.data, status=status.HTTP_201_CREATED)
+			return redirect('/orders/')
 		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
