@@ -67,10 +67,10 @@ def create_order(request):
 #	Response({"order_status": status})
 #	return redirect('/orders/')
 
-@api_view(['PATCH'])
+@api_view(['PUT'])
 def order_status_update(request):
 
-	if request.method == 'PATCH':
+	if request.method == 'PUT':
 		data = {'order_status': request.DATA.get('orderform'),'id': request.DATA.get('orderid'),'client': request.DATA.get('clientid')}
 		print data
 		serializer = OrderStatusUpdateSerializer(data=data)

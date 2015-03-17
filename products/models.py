@@ -9,7 +9,7 @@ class Products(models.Model):
 	product_material = models.CharField(max_length=30)
 	product_price = models.IntegerField()
 	product_order = models.ManyToManyField(Order)
-	product_pic = models.FileField(upload_to='%Y/%m/%d/')
+	product_pic = models.FileField(upload_to='%Y/%m/%d/',null=True, blank=True)
 
 	def __unicode__(self):
 		return unicode(self.product_name)
@@ -17,7 +17,7 @@ class Products(models.Model):
 
 class Brand(models.Model):
 	brand_name = models.CharField(max_length=100)
-	brand_pic = models.FileField(upload_to='%Y/%m/%d/')
+	brand_pic = models.FileField(upload_to='%Y/%m/%d/',null=True, blank=True)
 	def __unicode__(self):
 		return unicode(self.brand_name)
 

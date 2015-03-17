@@ -22,7 +22,7 @@
       <div class="modal-body"> 
   <form  id="statusform" action="/orders/order_status_update/" method="POST"> {% csrf_token %}
 	
-  	<input type="hidden" name="_method" value ="PATCH">
+  	<input type="hidden" name="_method" value ="PUT">
 	<h2>Current Status: {{order.order_status}}</h2>
   <select  name="orderform"class="form-control">
   <option  name="orderstat" value="Not Fullfilled">Not Fullfilled</option>
