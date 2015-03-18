@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.models import User
 from orders.models import Order
 from clients.models import Client
-from products.models import Products, Brand, Lookbook,LookbookCategory
+from products.models import Products, Brand, Lookbook,LookbookCategory,Likes,Dislikes
 from rest_framework import routers, serializers, viewsets
 
 # Serializers define the API representation.
@@ -50,6 +50,16 @@ class LookbookSerializer(serializers.ModelSerializer):
         model = Lookbook
         fields = ('id','category','lookbook_pic','lookbook_name')
 
+class LikesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Likes
+        fields = ('id','lookbook_likes','client_likes')
+
+class DislikesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dislikes
+        fields = ('id','lookbook_dislikes','client_dislikes')
+
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -79,6 +89,14 @@ class LookbookViewSet(viewsets.ModelViewSet):
     queryset = Lookbook.objects.all()
     serializer_class = LookbookSerializer
 
+class LikesViewSet(viewsets.ModelViewSet):
+    queryset = Likes.objects.all()
+    serializer_class = LikesSerializer
+
+class DislikesViewSet(viewsets.ModelViewSet):
+    queryset = Dislikes.objects.all()
+    serializer_class = DislikesSerializer
+
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -88,7 +106,8 @@ router.register(r'products',ProductsViewSet)
 router.register(r'brands',BrandViewSet)
 router.register(r'lookbookCategory',LookbookCategoryViewSet)
 router.register(r'lookbook',LookbookViewSet)
-
+router.register(r'likes',LikesViewSet)
+router.register(r'dislikes',DislikesViewSet)
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'lapelBackend.views.home', name='home'),

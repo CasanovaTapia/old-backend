@@ -38,3 +38,9 @@ class Likes(models.Model):
         lookbook_likes = models.ManyToManyField(Lookbook)
         def __unicode__(self):
                 return unicode(self.id)
+
+class Dislikes(models.Model):
+        client_dislikes = models.ManyToManyField(Client)
+        lookbook_dislikes = models.ManyToManyField(Lookbook)
+        def __unicode__(self):
+                return unicode(self.id)
