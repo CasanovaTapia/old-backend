@@ -3,3 +3,4 @@ pillow
 django-avatar
 djangorestframework
 django-rest-swagger
+MySQL-python
