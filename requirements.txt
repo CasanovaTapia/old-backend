@@ -2,3 +2,4 @@ django
 pillow
 django-avatar
 djangorestframework
+django-rest-swagger
