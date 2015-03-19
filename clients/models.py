@@ -14,7 +14,7 @@ class Client(models.Model):
 	sales_rep = models.CharField(max_length=30,null=True, blank=True)
 	meeting_location = models.CharField(max_length=30,null=True, blank=True)
 	contact_person = models.CharField(max_length=30,null=True, blank=True)
-	profie_pic = models.FileField(upload_to='%Y/%m/%d/',null=True, blank=True)
+	profie_pic = models.FileField(upload_to='%Y/%m/%d/',null=True, blank=True, default='/page/static/page/img/lapel_black-1.png')
 
 	def __unicode__(self):
 		return unicode(self.full_name)
