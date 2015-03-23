@@ -26,6 +26,12 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#AWS STORAGE S3
+
+AWS_STORAGE_BUCKET_NAME = 'lapel-django-media-dev'
+AWS_ACCESS_KEY_ID = 'AKIAJLCKM4EEF5VZNZNQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 # Application definition
 
@@ -46,6 +52,7 @@ INSTALLED_APPS = (
 	'avatar',
 	'rest_framework.authtoken',
 	'rest_framework_swagger',
+	'storages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -95,9 +102,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/lapelBackend/page/static/'
 
-MEDIA_ROOT = '~/lapelBackend/media'
-MEDIA_URL = '/media/'
+MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 # API Settings
 
@@ -114,3 +122,4 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     )
 }
+

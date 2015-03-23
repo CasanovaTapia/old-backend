@@ -92,7 +92,7 @@ vertical-align: top;
  * ===============================================*/
 .effect8
 {
-  	position:relative;       
+  	position:relative;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -100,7 +100,7 @@ vertical-align: top;
 .effect8:before, .effect8:after
 {
 	content:"";
-    position:absolute; 
+    position:absolute;
     z-index:-1;
     -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
     -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
@@ -111,15 +111,15 @@ vertical-align: top;
     right:0;
     -moz-border-radius:100px / 10px;
     border-radius:100px / 10px;
-} 
+}
 .effect8:after
 {
-	right:10px; 
+	right:10px;
     left:auto;
-    -webkit-transform:skew(8deg) rotate(3deg); 
-       -moz-transform:skew(8deg) rotate(3deg);     
-        -ms-transform:skew(8deg) rotate(3deg);     
-         -o-transform:skew(8deg) rotate(3deg); 
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
             transform:skew(8deg) rotate(3deg);
 }
 
@@ -150,12 +150,22 @@ display:inline-block;
 color:white;
 -webkit-font-smoothing:antialiased;
 font-family: 'Raleway', sans-serif;
+text-transform:uppercase;
+letter-spacing:3px;
+}
+.detail-title h1{
+  font-size:24px;
 }
 .detail-title-top{
 color:white;
+letter-spacing:3px;
+text-transform:uppercase;
 -webkit-font-smoothing:antialiased;
 font-family: 'Raleway', sans-serif;
 display:inline-block;
+}
+.detail-title-top h1{
+font-size:24px;
 }
 .details{
 display: inline-block;

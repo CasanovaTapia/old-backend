@@ -7,8 +7,6 @@ import page.views as page_app
 from .models import Client
 from orders.models import Order
 from products.models import Products
-#from .models import Document
-#from .forms import DocumentForm
 
 @login_required(login_url='/page')
 def clients(request):
@@ -25,9 +23,9 @@ def detail(request,id):
 	template_path = "clients/client_detail.html"
 	template = loader.get_template(template_path)
 	client_detail = Client.objects.filter(pk=id)
-	#client_spec = Order.objects.get(client=client_detail)
 	order_detail = Order.objects.all()
 	product_detail = Products.objects.all()
+
 
 	context = {"client_detail":client_detail,
 				"order_detail":order_detail,
@@ -66,4 +64,3 @@ def profileUpload(request):
             newpic.save()
 
 	return (request)
-

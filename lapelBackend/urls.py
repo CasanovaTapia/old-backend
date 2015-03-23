@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.models import User
 from orders.models import Order
 from clients.models import Client
+from procurements.models import Procurement
 from products.models import Products, Brand, Lookbook,LookbookCategory,Likes,Dislikes
 from rest_framework import routers, serializers, viewsets
 
@@ -60,6 +61,11 @@ class DislikesSerializer(serializers.ModelSerializer):
         model = Dislikes
         fields = ('id','lookbook_dislikes','client_dislikes')
 
+class ProcurementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Procurement
+        fields = ('id','sales_rep','brand_name','sku','price')
+
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -97,6 +103,10 @@ class DislikesViewSet(viewsets.ModelViewSet):
     queryset = Dislikes.objects.all()
     serializer_class = DislikesSerializer
 
+class ProcurementViewSet(viewsets.ModelViewSet):
+    queryset = Procurement.objects.all()
+    serializer_class = ProcurementSerializer
+
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -108,6 +118,7 @@ router.register(r'lookbookCategory',LookbookCategoryViewSet)
 router.register(r'lookbook',LookbookViewSet)
 router.register(r'likes',LikesViewSet)
 router.register(r'dislikes',DislikesViewSet)
+router.register(r'procurements',ProcurementViewSet)
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'lapelBackend.views.home', name='home'),

@@ -100,10 +100,12 @@
 </div>
 {%for product in product_detail%}
 {%for order in order_detail%}
-{%if product.id == order.id%}
+{%if client == order.client%}
+{%if product.product_order == order.id%}
 <div class="wardrobe-item">
 <img class="wardrobe-client-detail" src="{{product.product_pic.url}}"/>
 </div>
+{%endif%}
 {%endif%}
 {%endfor%}
 {%endfor%}
